@@ -26,9 +26,5 @@ of the box. So AEMET was dropped for effort-vs-marginal-gain, not impossibility.
 
 ## Raw data (not included here)
 
-The ~1.7 GB raw AEMET 2022 station archive is **not** copied into this repo (too
-large). It lives at:
-
-```
-…/beach_counting/weather_data/aemet/2022/
-```
+The ~1.7 GB raw AEMET 2022 station archive is **not** included in this repo (too
+large); it is kept outside version control.

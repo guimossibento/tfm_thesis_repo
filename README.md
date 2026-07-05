@@ -89,8 +89,8 @@ cd paper && latexmk -pdf document.tex
   of `notebooks/generate_train_data.ipynb`; the matching `make_*.py` are standalone twins.
 - `results/` holds CSV / JSON only; model checkpoints and Lightning logs were left out
   (re-run the training scripts to regenerate). The Optuna `.db` search history **is** kept
-  under `optuna/`; the raw ~1.7 GB AEMET station archive is **not** — see
-  `analysis/aemet/README.md` for where it lives.
+  under `optuna/`; the raw ~1.7 GB AEMET station archive is **not** (too large,
+  kept outside version control).
 - Data covers 2022 + the 2025–2026 deployment era; counts are Bayesian VGG-19 estimates,
   not human ground truth.
 # tfm_thesis_repo

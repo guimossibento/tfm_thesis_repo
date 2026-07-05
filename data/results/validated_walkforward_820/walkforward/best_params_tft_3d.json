@@ -1,0 +1,8 @@
+{
+  "hidden_size": 192,
+  "lr": 3.6185529156674275e-05,
+  "dropout": 0.13435943382829146,
+  "scaler": "minmax",
+  "input_size": 48,
+  "attn_dropout": 0.268391089729234
+}

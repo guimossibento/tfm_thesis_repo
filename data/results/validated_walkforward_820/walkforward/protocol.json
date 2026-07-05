@@ -1,0 +1,140 @@
+{
+  "protocol": "walkforward",
+  "panel_path": "/Users/guilhermemossibento/Desktop/master_activities/TFM/beach_counting/beachcamweb/apps/prediction/pipeline_workspace/clean_dataset_backup/all_clean.csv",
+  "nf_version": "3.1.4",
+  "seed_base": 42,
+  "seeds": 1,
+  "trials": 80,
+  "n_startup_trials": 20,
+  "horizons_days": [
+    3,
+    10,
+    15
+  ],
+  "horizon_hours": {
+    "3": 39,
+    "10": 130,
+    "15": 195
+  },
+  "families": [
+    "tft",
+    "lstm",
+    "xgb"
+  ],
+  "cap_k": 1.5,
+  "cap_percentile": 90,
+  "test_window": [
+    "2025-06-01",
+    "2026-02-28"
+  ],
+  "train_window": [
+    "2022-07-14",
+    "2025-05-31"
+  ],
+  "n_train_rows": 138814,
+  "n_test_rows": 7572,
+  "n_beaches": 6,
+  "issuance": "weekly Mondays (rolling forecast origins)",
+  "daytime_window": "08:00-20:00",
+  "season_months": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "summer_months": [
+    6,
+    7,
+    8
+  ],
+  "capacity_def": "per-series P90 on TRAIN daytime rows, floored at max(P90,1)",
+  "primary_metric": "per-series relMAE = MAE_series / P90_series, mean over series",
+  "cross_check_metrics": [
+    "ratio-of-means (pooled)",
+    "mean-normalised (MAE/mean_y)",
+    "raw MAE (users)",
+    "per-beach R2"
+  ],
+  "inner_val": "temporal tail of TRAIN (last ~18%), never the test window",
+  "dm": "abs-error loss, Newey-West HAC within series blocks + HLN + Wilcoxon, identical rows",
+  "search_spaces": {
+    "tft": {
+      "FIX": {
+        "n_head": 4,
+        "batch_size": 64,
+        "early_stop_patience_steps": 45
+      },
+      "SEARCH": {
+        "hidden_size": [
+          96,
+          192,
+          256
+        ],
+        "lr": "loguniform[2e-5,1e-3]",
+        "dropout": [
+          0.0,
+          0.4
+        ],
+        "scaler": [
+          "robust",
+          "minmax",
+          "standard"
+        ],
+        "input_size": [
+          24,
+          36,
+          48
+        ],
+        "attn_dropout": [
+          0.0,
+          0.4
+        ]
+      }
+    },
+    "lstm": {
+      "FIX": {
+        "batch_size": 64,
+        "decoder_hidden_size": 64,
+        "decoder_layers": 2,
+        "early_stop_patience_steps": 45
+      },
+      "SEARCH": {
+        "encoder_n_layers": [
+          1,
+          2,
+          3
+        ],
+        "lr": "loguniform[2e-5,1e-3]",
+        "encoder_dropout": [
+          0.0,
+          0.4
+        ],
+        "encoder_hidden_size": [
+          64,
+          128,
+          256
+        ],
+        "scaler": [
+          "robust",
+          "minmax",
+          "standard"
+        ],
+        "input_size": [
+          24,
+          36,
+          48
+        ]
+      }
+    },
+    "xgb": {
+      "SEARCH": "8-param Castelle space (n_estimators, max_depth, lr, subsample, colsample_bytree, min_child_weight, reg_alpha, reg_lambda)"
+    }
+  },
+  "nf_max_steps": {
+    "trial": 200,
+    "final": 500
+  },
+  "generated_at": "2026-07-03T16:20:03.169475"
+}

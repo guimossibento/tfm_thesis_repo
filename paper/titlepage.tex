@@ -1,0 +1,132 @@
+\thispagestyle{empty}
+
+\makeatletter
+\begin{titlepage}
+
+    %%%%
+    % COBERTA
+    %%%%
+
+    \bfseries
+
+    {
+    \includegraphics[height=30mm]{figures/logos/UIB_UniversitasBalearica_horizontal.png}
+    \ifedisslogo
+        \hfill
+        \raisebox{-10mm}{
+            \includegraphics[height=40mm]{figures/logos/EDISS.jpeg}
+        }
+    \fi
+    }
+
+    \vspace{20mm}
+	{
+        \LARGE
+
+	    MASTER'S THESIS
+        \vspace{20mm}
+
+        \hfill%
+        \begin{minipage}{130mm}
+            \begin{flushright}\scshape \bfseries \@title\end{flushright}
+        \end{minipage}
+        \vspace{20mm}
+
+	    \@author
+        \vspace{20mm}
+    }
+    {
+        \large
+
+	    Master's Degree in Intelligent Systems (MUSI)
+        \vspace{0mm}
+
+	    Specialization in \@specialization.
+        \vspace{5mm}
+
+	    Centre for Postgraduate Studies
+        \vspace{15mm}
+
+	    Academic year \@academicyear
+    }
+    \thispagestyle{empty}
+    \newpage
+
+    %%%%
+    % PORTADA
+    %%%%
+
+
+    \vspace*{20mm}
+	{
+        \Huge
+        \bfseries
+
+        {\scshape \@title}
+        \vspace{10mm}
+
+        \@author
+        \vspace{20mm}
+    }
+    {
+        \LARGE
+        \bfseries
+
+	    MASTER'S THESIS
+        \vspace{5mm}
+
+	    Centre for Postgraduate Studies
+        \vspace{5mm}
+
+	    University of the Balearic Islands
+        \vspace{10mm}
+    }
+    {
+        \bfseries
+
+	    Academic year \@academicyear
+        \vspace{20mm}
+
+    }
+    {
+	    Keywords:
+        \vspace{5mm}
+
+        \@keywords
+        \vspace{30mm}
+    }
+    {
+        \itshape
+
+        Tutor(s): \@tutors.
+    }
+    \thispagestyle{empty}
+    \newpage
+
+    %%%%
+    % LICENSE
+    %%%%
+
+    \strut \vfill
+
+    \noindent\makebox[\linewidth]{\rule{0.8\paperwidth}{0.4pt}}
+
+    {
+        \mdseries
+        \vspace*{5mm}
+        \edef\@licenseurl{https://creativecommons.org/licenses/\@license}%
+        \begin{center}
+            This master's thesis is licensed under a
+            {\itshape Creative Commons \@license} license\\
+            (\expandafter\url\expandafter{\@licenseurl}).
+        \end{center}
+    }
+    {
+        \vspace*{5mm}
+        \begin{center}
+            \includegraphics[width=30mm]{figures/licenses/\@license.png}
+        \end{center}
+    }
+    \thispagestyle{empty}
+\end{titlepage}
+\makeatother

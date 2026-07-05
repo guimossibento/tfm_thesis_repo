@@ -1,0 +1,15 @@
+\begin{table}[!t]
+\caption{15-day daytime evaluation, cache2022 out-of-distribution (train 2022, validate the 2025--26 Django panel; 13 beaches, identical rows). Headline season relMAE, per-series P90. The TFT wins every horizon against both baselines, Diebold--Mariano significant (<0.01$).}
+\label{tab:daytime}
+\begin{center}\footnotesize
+\begin{tabular}{lccc}
+\toprule
+Horizon & TFT & LSTM & XGB \
+\midrule
+3\,d & 	extbf{0.279} & 0.308 & 0.431 \
+10\,d & 	extbf{0.324} & 0.425 & 0.507 \
+15\,d & 	extbf{0.303} & 0.368 & 0.532 \
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}

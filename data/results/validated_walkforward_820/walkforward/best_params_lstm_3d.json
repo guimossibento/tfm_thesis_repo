@@ -1,0 +1,8 @@
+{
+  "encoder_n_layers": 2,
+  "lr": 0.00810235620776667,
+  "scaler": "robust",
+  "input_size": 48,
+  "encoder_dropout": 0.17058430238005867,
+  "encoder_hidden_size": 96
+}

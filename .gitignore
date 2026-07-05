@@ -1,0 +1,32 @@
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.bbl
+*.blg
+*.toc
+*.synctex.gz
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Expanded panels (keep the .gz, not the raw CSV)
+data/dataset.csv
+data/all_clean.csv
+
+# Heavy training artifacts (regenerate via the scripts)
+**/lightning_logs/
+**/*.ckpt
+**/*.db
+
+# ...except the Optuna study DBs — search-history provenance, kept on purpose
+!optuna/
+!optuna/*.db
+
+.DS_Store
+
+.idea/

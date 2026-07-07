@@ -15,7 +15,7 @@ ds - issue_date. It sees only the real past at each origin (no leakage).
 
 Usage:
   python new_training_pipeline/recursive_xgb_traj.py \
-    --panel beachcamweb/apps/prediction/pipeline_workspace/clean_dataset_backup/all_clean.csv \
+    --panel data/all_clean.csv \
     --validated-run new_training_pipeline_server_20260626_FINAL/validated_run --proto cache2022 \
     --trials 40 --out new_training_pipeline/recursive_xgb
 """

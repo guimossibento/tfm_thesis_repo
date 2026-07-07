@@ -15,7 +15,7 @@ it can catch up at long lead. This is the apples-to-apples trajectory comparison
 
 Usage:
   python new_training_pipeline/castelle_style_xgb.py \
-    --panel beachcamweb/apps/prediction/pipeline_workspace/clean_dataset_backup/all_clean.csv \
+    --panel data/all_clean.csv \
     --validated-run new_training_pipeline_server_1906/validated_run --tft-proto walkforward \
     --test-start 2025-06-01 --test-end 2026-02-28 --out new_training_pipeline/castelle_xgb
 """

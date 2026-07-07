@@ -1,0 +1,3 @@
+comparison,n_series,DM_dedicated_wins_bh,DM_truncated_wins_bh,DM_ties_bh,pooled_DM_stat,pooled_DM_p,WX_dedicated_wins_bh,WX_truncated_wins_bh,WX_ties_bh,pooled_Wilcoxon_p,pooled_delta_mean
+3d_dedicated vs 15d[:39],29,22,0,7,7.826450331354783,5.10702591327572e-15,27,0,2,8.077170453687527e-153,2.8890404040404025
+10d_dedicated vs 15d[:130],29,5,2,22,0.7425726176181302,0.457740471749013,14,11,4,0.07907502393539081,0.2082870048644878

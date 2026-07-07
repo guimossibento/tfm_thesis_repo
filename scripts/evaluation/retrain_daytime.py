@@ -22,7 +22,7 @@ not dominate runtime. Matching keys on (unique_id, ds_real, issue_date).
 
 Run (server GPU):
   CUDA_VISIBLE_DEVICES=0 python new_training_pipeline/retrain_daytime.py \
-    --panel beachcamweb/apps/prediction/pipeline_workspace/clean_dataset_backup/all_clean.csv \
+    --panel data/all_clean.csv \
     --protocol cache2022 --horizons 15 --trials 15 --seeds 1 \
     --out new_training_pipeline/validated_daytime
 """
